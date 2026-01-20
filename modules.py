@@ -1,5 +1,4 @@
 import random
-import time
 filmer = [
     {
         "titel": "The Godfather",
@@ -60,8 +59,38 @@ def show_all_movies():
         print("Beskrivning: " + film["beskrivning"] + "\n\n")
 
 def random_movie():
-        movie_picker = random.randint(0, len(filmer) - 1)
-        print()
+
+        print("1. Sci-Fi\n"
+              "2. Drama\n"
+              "3. Fantasy\n")
+        while True:
+            user_input = input("Vilken kategori vill du få en film från?")
+
+            try:
+                user_input = int(user_input)
+            except:
+                print("\nFelaktig inmatning, vänligen skriv ett av menyvalen\n")
+
+            match user_input:
+                case 1:
+                    genre = "Sci-Fi"
+                    break
+                case 2:
+                    genre = "Drama"
+                    break
+                case 3:
+                    genre = "Fantasy"
+                    break
+                case _:
+                    print("\nFelaktig inmatning, välj en av menyvalen")
+
+
+        while True:
+            movie_picker = random.randint(0, len(filmer) - 1) #väljer en random film av altenativen.
+
+            if(filmer[movie_picker]["genre"] == genre): #avbryter loopen om genren stämmer överens med användarens val av genre
+                break
+
         print(filmer[movie_picker]["titel"])
         print()
 
