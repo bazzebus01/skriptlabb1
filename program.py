@@ -1,7 +1,6 @@
 from modules import show_all_movies
 from modules import guess_movie
 from modules import random_movie
-import random
 import time
 
 

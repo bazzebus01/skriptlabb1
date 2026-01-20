@@ -75,12 +75,13 @@ def guess_movie():
 
     while lives>0:
         user_guess = input("Gissa på filmen: ").lower()
+
         if user_guess == filmer[movie_picker]["titel"].lower():
-            print("du gissade rätt")
+            print("\n###############\ndu gissade rätt\n###############\n")
             break
         else:
             lives -= 1
-            print(f"du gissade fel, försök igen. du har {lives} försök kvar")
+            print(f"du gissade fel, försök igen. du har {lives} försök kvar\n")
 
     if lives == 0:
-        print(f"du förlorade.. Filmen var {filmer[movie_picker]["titel"]}")
+        print(f"\n######################################\ndu förlorade.. Filmen var {filmer[movie_picker]["titel"]}\n######################################\n")
