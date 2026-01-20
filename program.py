@@ -1,5 +1,6 @@
 from modules import show_all_movies
-import random
+from modules import random_movie
+from modules import guess_movie
 import time
 
 
@@ -11,8 +12,12 @@ while True:
     print("4. Avsluta")
     user_input = input("-> ")
 
-    # Konvertera user input till int - felhantering? try <--> except
-    user_input = int(user_input)
+    try: # Kontrollerar att inmatningen är en siffra och konverterar den
+        user_input = int(user_input)
+    except:
+        print("\nFelaktig inmatning, vänligen skriv en siffra.\n")
+        continue
+
 
     # Menyval
     match user_input:
@@ -20,15 +25,18 @@ while True:
             show_all_movies()
             print("Tryck på 'Enter' för att återgå till menyn.")
             input()
+
         case 2:
-            pass
+            random_movie()
+
         case 3:
-            pass
+            guess_movie()
+
         case 4:
             print("Avslutar programmet om 3 sekunder...")
             time.sleep(3) # Pausar programmet i 3sek innan det avslutas
             break
+
         case _:
-            print("Felaktig inmatning. Tryck på 'Enter' för att försöka igen.")
-            input()
+            print("\nFelaktig inmatning. Vänligen välj en av menyvalen.\n")
             continue
