@@ -1,15 +1,10 @@
 import random
-
 filmer = [
+    #drama filmer
     {
         "titel": "The Godfather",
         "genre": "Drama",
         "beskrivning": "Den åldrande patriarken i en organiserad brottsdynasti överför kontrollen över sitt hemliga imperium till sin motvillige son."
-    },
-    {
-        "titel": "The Lord of the Rings",
-        "genre": "Fantasy",
-        "beskrivning": "Gandalf och Aragorn leder Männens Värld mot Saurons armé för att dra hans blick från Frodo och Sam när de närmar sig Doomberget med Den Ena Ringen."
     },
     {
         "titel": "Pulp Fiction",
@@ -21,6 +16,7 @@ filmer = [
         "genre": "Drama",
         "beskrivning": "USA:s historia från 1950- till 70-talen utvecklas ur perspektivet av en man från Alabama med ett IQ på 75, som längtar efter att återförenas med sin barndomskärlek."
     },
+    #sci-fi filmer
     {
         "titel": "The Matrix",
         "genre": "Sci-Fi",
@@ -36,6 +32,7 @@ filmer = [
         "genre": "Sci-Fi",
         "beskrivning": "Efter att ha undersökt en mystisk överföring av okänt ursprung stöter besättningen på ett kommersiellt rymdskepp på en dödlig livsform."
     },
+    #fantasy filmer
     {
         "titel": "The Odyssey",
         "genre": "Fantasy",
@@ -45,12 +42,13 @@ filmer = [
         "titel": "Avatar: Fire and Ash",
         "genre": "Fantasy",
         "beskrivning": "Jakes och Neytiris familj brottas med sorg och stöter på en ny, aggressiv Na'vi-stam, Ash-folket, som leds av den eldiga Varang, medan konflikten på Pandora eskalerar och ett nytt moraliskt fokus framträder."
+    },
+    {
+        "titel": "The Lord of the Rings",
+        "genre": "Fantasy",
+        "beskrivning": "Gandalf och Aragorn leder Männens Värld mot Saurons armé för att dra hans blick från Frodo och Sam när de närmar sig Doomberget med Den Ena Ringen."
     }
 ]
-
-
-# def movies_sorted():
-# return filmer["titel"]
 
 def show_all_movies():
     # Sortera alfabetiskt by default?
@@ -60,8 +58,38 @@ def show_all_movies():
         print("Beskrivning: " + film["beskrivning"] + "\n\n")
 
 def random_movie():
-        movie_picker = random.randint(0, len(filmer) - 1)
-        print()
+
+        print("1. Sci-Fi\n"
+              "2. Drama\n"
+              "3. Fantasy\n")
+        while True:
+            user_input = input("Vilken kategori vill du få en film från?")
+
+            try:
+                user_input = int(user_input)
+            except:
+                print("\nFelaktig inmatning, vänligen skriv ett av menyvalen\n")
+
+            match user_input:
+                case 1:
+                    genre = "Sci-Fi"
+                    break
+                case 2:
+                    genre = "Drama"
+                    break
+                case 3:
+                    genre = "Fantasy"
+                    break
+                case _:
+                    print("\nFelaktig inmatning, välj en av menyvalen")
+
+
+        while True:
+            movie_picker = random.randint(0, len(filmer) - 1) #väljer en random film av altenativen.
+
+            if(filmer[movie_picker]["genre"] == genre): #avbryter loopen om genren stämmer överens med användarens val av genre
+                break
+
         print(filmer[movie_picker]["titel"])
         print()
 
