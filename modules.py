@@ -72,15 +72,16 @@ def guess_movie():
     print(filmer[movie_picker]["beskrivning"])
     print()
 
-    while lives > 0: # Ger användaren 3 chanser att gissa rätt film
-        user_guess = input("Gissa på filmen: ".lower())
+
+    while lives>0:
+        user_guess = input("Gissa på filmen: ").lower()
 
         if user_guess == filmer[movie_picker]["titel"].lower():
-            print("\n################\nDu gissade rätt!\n################\n")
+            print("\n###############\ndu gissade rätt\n###############\n")
             break
         else:
             lives -= 1
-            print(f"Du gissade fel, försök igen. Du har {lives} försök kvar.\n")
+            print(f"du gissade fel, försök igen. du har {lives} försök kvar\n")
 
     if lives == 0:
-        print(f"Du förlorade! Filmen var {filmer[movie_picker]["titel"]}.\n")
+        print(f"\n######################################\ndu förlorade.. Filmen var {filmer[movie_picker]["titel"]}\n######################################\n")
