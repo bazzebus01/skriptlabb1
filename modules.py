@@ -56,3 +56,4 @@ def show_all_movies():
         print("Titel: " + film["titel"])
         print("Genre: " + film["genre"])
         print("Beskrivning: " + film["beskrivning"] + "\n\n")
+
