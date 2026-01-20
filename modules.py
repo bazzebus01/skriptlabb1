@@ -1,3 +1,5 @@
+import random
+import time
 filmer = [
     {
         "titel": "The Godfather",
@@ -57,3 +59,29 @@ def show_all_movies():
         print("Genre: " + film["genre"])
         print("Beskrivning: " + film["beskrivning"] + "\n\n")
 
+def random_movie():
+        movie_picker = random.randint(0, len(filmer) - 1)
+        print()
+        print(filmer[movie_picker]["titel"])
+        print()
+
+def guess_movie():
+    lives = 3
+    movie_picker = random.randint(0, len(filmer) - 1)
+    print()
+    print(filmer[movie_picker]["beskrivning"])
+    print()
+
+
+    while lives>0:
+        user_guess = input("Gissa på filmen: ").lower()
+
+        if user_guess == filmer[movie_picker]["titel"].lower():
+            print("\n###############\ndu gissade rätt\n###############\n")
+            break
+        else:
+            lives -= 1
+            print(f"du gissade fel, försök igen. du har {lives} försök kvar\n")
+
+    if lives == 0:
+        print(f"\n######################################\ndu förlorade.. Filmen var {filmer[movie_picker]["titel"]}\n######################################\n")
