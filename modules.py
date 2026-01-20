@@ -1,14 +1,10 @@
 import random
 filmer = [
+    #drama filmer
     {
         "titel": "The Godfather",
         "genre": "Drama",
         "beskrivning": "Den åldrande patriarken i en organiserad brottsdynasti överför kontrollen över sitt hemliga imperium till sin motvillige son."
-    },
-    {
-        "titel": "The Lord of the Rings",
-        "genre": "Fantasy",
-        "beskrivning": "Gandalf och Aragorn leder Männens Värld mot Saurons armé för att dra hans blick från Frodo och Sam när de närmar sig Doomberget med Den Ena Ringen."
     },
     {
         "titel": "Pulp Fiction",
@@ -20,6 +16,7 @@ filmer = [
         "genre": "Drama",
         "beskrivning": "USA:s historia från 1950- till 70-talen utvecklas ur perspektivet av en man från Alabama med ett IQ på 75, som längtar efter att återförenas med sin barndomskärlek."
     },
+    #sci-fi filmer
     {
         "titel": "The Matrix",
         "genre": "Sci-Fi",
@@ -35,6 +32,7 @@ filmer = [
         "genre": "Sci-Fi",
         "beskrivning": "Efter att ha undersökt en mystisk överföring av okänt ursprung stöter besättningen på ett kommersiellt rymdskepp på en dödlig livsform."
     },
+    #fantasy filmer
     {
         "titel": "The Odyssey",
         "genre": "Fantasy",
@@ -44,12 +42,13 @@ filmer = [
         "titel": "Avatar: Fire and Ash",
         "genre": "Fantasy",
         "beskrivning": "Jakes och Neytiris familj brottas med sorg och stöter på en ny, aggressiv Na'vi-stam, Ash-folket, som leds av den eldiga Varang, medan konflikten på Pandora eskalerar och ett nytt moraliskt fokus framträder."
+    },
+    {
+        "titel": "The Lord of the Rings",
+        "genre": "Fantasy",
+        "beskrivning": "Gandalf och Aragorn leder Männens Värld mot Saurons armé för att dra hans blick från Frodo och Sam när de närmar sig Doomberget med Den Ena Ringen."
     }
 ]
-
-
-# def movies_sorted():
-# return filmer["titel"]
 
 def show_all_movies():
     # Sortera alfabetiskt by default?
