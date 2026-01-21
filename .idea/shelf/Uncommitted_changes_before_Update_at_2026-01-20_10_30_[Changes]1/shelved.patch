@@ -1,0 +1,52 @@
+Index: modules.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules.py b/modules.py
+--- a/modules.py	(revision 29257787e3d9926d5e800a2eb27e840daabd705f)
++++ b/modules.py	(date 1768901404109)
+@@ -1,0 +1,43 @@
++movies = [
++    {
++        "Titel" : "Det",
++        "Gener" : "Skräck",
++        "Beskrivning" : "Sommaren 1989 går en grupp mobbade barn samman för att förgöra ett "
++                        "skepnadsskiftande monster, som förklär sig till en clown och lever på barnen i Derry, "
++                        "deras lilla stad i Maine."
++    },
++    {
++        "Titel" : "Doctor Sleep",
++        "Gener" : "Skräck",
++        "Beskrivning" : "Åren efter händelserna i The Shining (1980) måste en nu vuxen Dan Torrance skydda en ung flicka"
++                        "med liknande krafter från en kult känd som The True Knot, som utnyttjar barn med krafter att "
++                        "förbli odödliga."
++
++    },
++    {
++        "Titel" : "The Shining",
++        "Gener" : "Skräck",
++        "Beskrivning" : "En familj beger sig till ett isolerat hotell för vintern, där en ondskefull närvaro påverkar "
++                        "fadern till våld. Samtidigt ser hans synska son fruktansvärda föraningar från både det "
++                        "förflutna och framtiden.",
++    },
++    {
++        "Titel" : "Carrie",
++        "Gener" : "Skräck",
++        "Beskrivning" : "Carrie White, en blyg, vänlös tonårsflicka som är skyddad av sin dominerande, religiösa mamma, "
++                        "släpper lös sina telekinetiska krafter efter att ha blivit förödmjukad av sina klasskamrater "
++                        "på sin studentbal."
++    },
++    {
++        "Titel" : "The Great Gatsby",
++        "Gener" : "Tragedi",
++        "Beskrivning" : "Författaren och Wall Street-handlaren Nick Carraway dras till sin mystiske miljonärgranne "
++                        "Jay Gatsbys förflutna och livsstil mitt under jazzålderns upproriska fester.",
++    },
++    {
++        "Titel" : "",
++        "Gener" : "",
++        "Beskrivning" : "",
++    }
++]
++

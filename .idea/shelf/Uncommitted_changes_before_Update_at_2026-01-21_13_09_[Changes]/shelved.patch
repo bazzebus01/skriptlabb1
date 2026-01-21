@@ -1,0 +1,270 @@
+Index: modules.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/modules.py b/modules.py
+--- a/modules.py	(revision 29db47295acf4fad033d5d03b4888b448b90fbe4)
++++ b/modules.py	(date 1768902753233)
+@@ -1,0 +1,58 @@
++filmer = [
++    {
++        "titel": "The Godfather",
++        "genre": "Drama",
++        "beskrivning": "Den åldrande patriarken i en organiserad brottsdynasti överför kontrollen över sitt hemliga imperium till sin motvillige son."
++    },
++    {
++        "titel": "The Lord of the Rings",
++        "genre": "Fantasy",
++        "beskrivning": "Gandalf och Aragorn leder Männens Värld mot Saurons armé för att dra hans blick från Frodo och Sam när de närmar sig Doomberget med Den Ena Ringen."
++    },
++    {
++        "titel": "Pulp Fiction",
++        "genre": "Drama",
++        "beskrivning": "Livet för två maffiatorrödrar, en boxare, en gangster och hans fru, och ett par dinerbanditer flätas samman i fyra berättelser om våld och försoning."
++    },
++    {
++        "titel": "Forrest Gump",
++        "genre": "Drama",
++        "beskrivning": "USA:s historia från 1950- till 70-talen utvecklas ur perspektivet av en man från Alabama med ett IQ på 75, som längtar efter att återförenas med sin barndomskärlek."
++    },
++    {
++        "titel": "The Matrix",
++        "genre": "Sci-Fi",
++        "beskrivning": "När en vacker främling leder datahackern Neo till en hemsk undre värld upptäcker han den chockerande sanningen – livet han känner till är ett utarbetat bedrägeri från en ond cyberunderrättelsetjänst."
++    },
++    {
++        "titel": "Interstellar",
++        "genre": "Sci-Fi",
++        "beskrivning": "När jorden blir obeboelig i framtiden får bonden och före detta NASA-piloten Joseph Cooper i uppdrag att styra en rymdfarkost, tillsammans med ett team av forskare, för att hitta en ny planet för människor."
++    },
++    {
++        "titel": "Alien",
++        "genre": "Sci-Fi",
++        "beskrivning": "Efter att ha undersökt en mystisk överföring av okänt ursprung stöter besättningen på ett kommersiellt rymdskepp på en dödlig livsform."
++    },
++    {
++        "titel": "The Odyssey",
++        "genre": "Fantasy",
++        "beskrivning": "Efter det trojanska kriget står Odysseus inför en farlig resa tillbaka till Ithaka, där han möter varelser som cyklopen Polyfemos, sirenerna och Kirke längs vägen."
++    },
++    {
++        "titel": "Avatar: Fire and Ash",
++        "genre": "Fantasy",
++        "beskrivning": "Jakes och Neytiris familj brottas med sorg och stöter på en ny, aggressiv Na'vi-stam, Ash-folket, som leds av den eldiga Varang, medan konflikten på Pandora eskalerar och ett nytt moraliskt fokus framträder."
++    }
++]
++
++
++# def movies_sorted():
++# return filmer["titel"]
++
++def show_all_movies():
++    # Sortera alfabetiskt by default?
++    for film in filmer:
++        print("Titel: " + film["titel"])
++        print("Genre: " + film["genre"])
++        print("Beskrivning: " + film["beskrivning"] + "\n\n")
+Index: main.py
+===================================================================
+diff --git a/main.py b/main.py
+deleted file mode 100644
+--- a/main.py	(revision 29db47295acf4fad033d5d03b4888b448b90fbe4)
++++ /dev/null	(revision 29db47295acf4fad033d5d03b4888b448b90fbe4)
+@@ -1,11 +0,0 @@
+-import random
+-import modules
+-
+-running = 1
+-while running == 1:
+-    print("1. få ett film förslag")
+-    print("2. gissa film")
+-    print("3. visa alla filmer")
+-    print("4. avsluta program")
+-    userInput = input("skriv in menyalternativ:")
+-
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"cdac7a54-10aa-4ade-a46b-2e6d83da68d9\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"38VsaV6pPj0FXjtyIMEfa1BEbEH\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\r\n    \"Python.main.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"trulsa\",\r\n    \"settings.editor.selected.configurable\": \"preferences.lookFeel\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-ca5e2b39c7df-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.308\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"cdac7a54-10aa-4ade-a46b-2e6d83da68d9\" name=\"Changes\" comment=\"\" />\r\n      <created>1768896135256</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1768896135256</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 29db47295acf4fad033d5d03b4888b448b90fbe4)
++++ b/.idea/workspace.xml	(date 1768997161750)
+@@ -1,7 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="cdac7a54-10aa-4ade-a46b-2e6d83da68d9" name="Changes" comment="" />
++    <list default="true" id="cdac7a54-10aa-4ade-a46b-2e6d83da68d9" name="Changes" comment="Merge remote-tracking branch 'origin/trulsa' into trulsa&#10;&#10;# Conflicts:&#10;#&#9;.idea/skriptprogrammering labb 1.iml&#10;#&#9;.idea/workspace.xml">
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/program.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/modules.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules.py" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -16,8 +22,19 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;trellh25&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;git@github.com:bazzebus01/skriptlabb1.git&quot;,
++    &quot;accountId&quot;: &quot;a388615e-c975-49db-9c45-336aa54fb959&quot;
++  }
++}</component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 8
+ }</component>
+@@ -26,19 +43,50 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+-    "Python.main.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "trulsa",
+-    "settings.editor.selected.configurable": "preferences.lookFeel"
+-  }
+-}]]></component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;Python.main.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
++    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;Merging trulsa&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  }
++}</component>
++  <component name="RunManager">
++    <configuration name="program" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
++      <module name="skriptprogrammering labb 1" />
++      <option name="ENV_FILES" value="" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <option name="IS_MODULE_SDK" value="false" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="RUN_TOOL" value="" />
++      <option name="SCRIPT_NAME" value="C:\Users\qwqfl\PycharmProjects\skriptlabb1\program.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++  </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
++        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.29346.308" />
+         <option value="bundled-python-sdk-ca5e2b39c7df-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.308" />
+       </set>
+     </attachedChunks>
+@@ -50,8 +98,12 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1768896135256</updated>
++      <workItem from="1768897964451" duration="391000" />
+     </task>
+     <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+@@ -64,4 +116,11 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="asdfghj" />
++    <option name="LAST_COMMIT_MESSAGE" value="asdfghj" />
++  </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/skriptlabb1$main.coverage" NAME="main Coverage Results" MODIFIED="1768898144126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: program.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/program.py b/program.py
+new file mode 100644
+--- /dev/null	(date 1768902814786)
++++ b/program.py	(date 1768902814786)
+@@ -0,0 +1,23 @@
++from modules import show_all_movies
++
++while True:
++    print("Menyalternativ")
++    print("1. Visa alla filmer")
++    print("2. Få ett slumpmässigt filmförslag")
++    print("3. Gissa film från beskrivning")
++    print("4. Avsluta")
++    user_input = input("-> ")
++    user_input = int(user_input)
++
++    match user_input:
++        case 1:
++            show_all_movies()
++        case 2:
++            pass
++        case 3:
++            pass
++        case 4:
++            pass
++        case _:
++            print("Felaktig inmatning. Var god försök igen. \n\n")
++            continue
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1768902814850)
++++ b/.idea/misc.xml	(date 1768902814850)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.14 (skriptlabb1)" />
++  </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
