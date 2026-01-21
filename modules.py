@@ -1,0 +1,115 @@
+import random
+filmer = [
+    #drama filmer
+    {
+        "titel": "The Godfather",
+        "genre": "Drama",
+        "beskrivning": "Den åldrande patriarken i en organiserad brottsdynasti överför kontrollen över sitt hemliga imperium till sin motvillige son."
+    },
+    {
+        "titel": "Pulp Fiction",
+        "genre": "Drama",
+        "beskrivning": "Livet för två maffiatorrödrar, en boxare, en gangster och hans fru, och ett par dinerbanditer flätas samman i fyra berättelser om våld och försoning."
+    },
+    {
+        "titel": "Forrest Gump",
+        "genre": "Drama",
+        "beskrivning": "USA:s historia från 1950- till 70-talen utvecklas ur perspektivet av en man från Alabama med ett IQ på 75, som längtar efter att återförenas med sin barndomskärlek."
+    },
+    #sci-fi filmer
+    {
+        "titel": "The Matrix",
+        "genre": "Sci-Fi",
+        "beskrivning": "När en vacker främling leder datahackern Neo till en hemsk undre värld upptäcker han den chockerande sanningen – livet han känner till är ett utarbetat bedrägeri från en ond cyberunderrättelsetjänst."
+    },
+    {
+        "titel": "Interstellar",
+        "genre": "Sci-Fi",
+        "beskrivning": "När jorden blir obeboelig i framtiden får bonden och före detta NASA-piloten Joseph Cooper i uppdrag att styra en rymdfarkost, tillsammans med ett team av forskare, för att hitta en ny planet för människor."
+    },
+    {
+        "titel": "Alien",
+        "genre": "Sci-Fi",
+        "beskrivning": "Efter att ha undersökt en mystisk överföring av okänt ursprung stöter besättningen på ett kommersiellt rymdskepp på en dödlig livsform."
+    },
+    #fantasy filmer
+    {
+        "titel": "The Odyssey",
+        "genre": "Fantasy",
+        "beskrivning": "Efter det trojanska kriget står Odysseus inför en farlig resa tillbaka till Ithaka, där han möter varelser som cyklopen Polyfemos, sirenerna och Kirke längs vägen."
+    },
+    {
+        "titel": "Avatar: Fire and Ash",
+        "genre": "Fantasy",
+        "beskrivning": "Jakes och Neytiris familj brottas med sorg och stöter på en ny, aggressiv Na'vi-stam, Ash-folket, som leds av den eldiga Varang, medan konflikten på Pandora eskalerar och ett nytt moraliskt fokus framträder."
+    },
+    {
+        "titel": "The Lord of the Rings",
+        "genre": "Fantasy",
+        "beskrivning": "Gandalf och Aragorn leder Männens Värld mot Saurons armé för att dra hans blick från Frodo och Sam när de närmar sig Doomberget med Den Ena Ringen."
+    }
+]
+
+def show_all_movies():
+    # Sortera alfabetiskt by default?
+    for film in filmer:
+        print("Titel: " + film["titel"])
+        print("Genre: " + film["genre"])
+        print("Beskrivning: " + film["beskrivning"] + "\n\n")
+
+def random_movie():
+
+        print("1. Sci-Fi\n"
+              "2. Drama\n"
+              "3. Fantasy\n")
+        while True:
+            user_input = input("Vilken kategori vill du få en film från?")
+
+            try:
+                user_input = int(user_input)
+            except:
+                print("\nFelaktig inmatning, vänligen skriv ett av menyvalen\n")
+
+            match user_input:
+                case 1:
+                    genre = "Sci-Fi"
+                    break
+                case 2:
+                    genre = "Drama"
+                    break
+                case 3:
+                    genre = "Fantasy"
+                    break
+                case _:
+                    print("\nFelaktig inmatning, välj en av menyvalen")
+
+
+        while True:
+            movie_picker = random.randint(0, len(filmer) - 1) #väljer en random film av altenativen.
+
+            if(filmer[movie_picker]["genre"] == genre): #avbryter loopen om genren stämmer överens med användarens val av genre
+                break
+
+        print(filmer[movie_picker]["titel"])
+        print()
+
+def guess_movie():
+    lives = 3
+    movie_picker = random.randint(0, len(filmer) - 1)
+    print()
+    print(filmer[movie_picker]["beskrivning"])
+    print()
+
+
+    while lives>0:
+        user_guess = input("Gissa på filmen: ").lower()
+
+        if user_guess == filmer[movie_picker]["titel"].lower():
+            print("\n###############\ndu gissade rätt\n###############\n")
+            break
+        else:
+            lives -= 1
+            print(f"du gissade fel, försök igen. du har {lives} försök kvar\n")
+
+    if lives == 0:
+        print(f"\n######################################\ndu förlorade.. Filmen var {filmer[movie_picker]["titel"]}\n######################################\n")
